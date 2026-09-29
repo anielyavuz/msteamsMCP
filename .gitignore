@@ -1,0 +1,8 @@
+# secrets and local state — never commit
+.env
+.env.*
+!.env.example
+*.jsonl
+*.log
+node_modules/
+.DS_Store

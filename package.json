@@ -1,0 +1,30 @@
+{
+  "name": "msteams-mcp",
+  "version": "0.1.0",
+  "description": "Self-hosted, least-privilege MCP server for Microsoft Teams (delegated, read-only by default) over local HTTP or stdio",
+  "license": "MIT",
+  "author": "Anıl Yavuz",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "msteams-mcp": "src/cli.mjs"
+  },
+  "scripts": {
+    "login": "node src/cli.mjs login",
+    "status": "node src/cli.mjs status",
+    "logout": "node src/cli.mjs logout",
+    "tools": "node src/cli.mjs tools",
+    "start": "node src/cli.mjs start",
+    "start:stdio": "node src/cli.mjs start --stdio",
+    "selftest": "node scripts/selftest.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "@azure/msal-node": "7.0.0",
+    "@modelcontextprotocol/sdk": "1.31.0",
+    "zod": "4.6.5"
+  }
+}
